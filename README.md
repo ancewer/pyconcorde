@@ -1,4 +1,4 @@
-PyConcorde
+PyConcorde (Not Support Windows 2023/2/28)
 ==========
 
 [![Build Status](https://travis-ci.org/jvkersch/pyconcorde.svg?branch=master)](https://travis-ci.org/jvkersch/pyconcorde)
@@ -38,13 +38,16 @@ To build PyConcorde, clone the repository:
 Then run 
 
 	pip install -e .
+This step will download concorde and qsopt, you may enconter eroor when downloading concorde or qsopt, you can open the setup.py files, find
+the url qsopt, and concorde, then copy to Data\qsopt.a, Data\qsopt.a, and build\concorde.tgz,
+then run pip install -e . again
 	
 Or, alternatively, all in one line, run:
 
 	pip install -e git+https://github.com/jvkersch/pyconcorde
 		
-	
-This will download and build Concorde (and its dependency QSOpt) and then build
+
+*** This will download and build Concorde (and its dependency QSOpt) and then build
 PyConcorde. While this may take a few minutes, downloading Concorde only
 happens the first time the install script is run (unless you remove the `data`
 directory).
